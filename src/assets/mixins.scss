@@ -1,0 +1,26 @@
+@mixin title() {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1rem;
+    color: $text;
+}
+
+@mixin sub-title() {
+    font-size: .7rem;
+    font-weight: normal;
+    line-height: .7rem;
+    color: $text;
+}
+
+@mixin text() {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1rem;
+    color: $text;
+}
+
+@mixin wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
