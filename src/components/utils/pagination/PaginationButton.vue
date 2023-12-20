@@ -11,7 +11,7 @@ defineProps({
 
 <template>
     <RouterLink v-if="!disabled" class="link" :class="active && 'active'" :to="{
-        path: '/',
+        path: route.path,
         query: {...route.query, page: value}
     }">{{ text }}</RouterLink>
     <span class="link disabled" v-else>{{ text }}</span>
