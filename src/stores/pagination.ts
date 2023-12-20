@@ -9,15 +9,12 @@ export const usePaginationStore = defineStore('pagination', () => {
   const isLast: Ref<boolean> = computed(() => currentPage.value === totalPageCount.value)
   const isFirst: Ref<boolean> = computed(() => currentPage.value === 0)
 
-  function setData(length: number, count: number): void {
+  function setData(length: number, count: number, page: number): void {
     contentLength.value = length
     perPageCount.value = count
-    totalPageCount.value = Math.abs(contentLength.value / perPageCount.value)
-  }
-
-  function setCurrentPage(page: number): void {
+    totalPageCount.value = Math.ceil(contentLength.value / perPageCount.value)
     currentPage.value = page
   }
 
-  return { contentLength, currentPage, perPageCount, totalPageCount, isLast, isFirst, setData, setCurrentPage }
+  return { contentLength, currentPage, perPageCount, totalPageCount, isLast, isFirst, setData }
 })

@@ -30,3 +30,11 @@ input, button {
     background-color: transparent;
     color: $text;
 }
+
+select {
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: $bgc;
+    border-color: $primary;
+    color: $text;
+}
